@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}
+
+\bibitem{desroziers}
+G{\'e}rald Desroziers, Loic Berre, Bernard Chapnik, and Paul Poli.
+\newblock Diagnosis of observation, background and analysis-error statistics in
+  observation space.
+\newblock {\em Quarterly Journal of the Royal Meteorological Society: A journal
+  of the atmospheric sciences, applied meteorology and physical oceanography},
+  131(613):3385--3396, 2005.
+
+\bibitem{book}
+Geir Evensen, Femke~C Vossepoel, and Peter~Jan van Leeuwen.
+\newblock {\em Data Assimilation Fundamentals: A Unified Formulation of the
+  State and Parameter Estimation Problem}.
+\newblock Springer Nature, 2022.
+
+\bibitem{gauthier}
+Pierre Gauthier, Ping Du, Sylvain Heilliette, and Louis Garand.
+\newblock Convergence issues in the estimation of interchannel correlated
+  observation errors in infrared radiance data.
+\newblock {\em Monthly Weather Review}, 146(10):3227--3239, 2018.
+
+\bibitem{menard}
+Richard M{\'e}nard.
+\newblock Error covariance estimation methods based on analysis residuals:
+  Theoretical foundation and convergence properties derived from simplified
+  observation networks.
+\newblock {\em Quarterly Journal of the Royal Meteorological Society},
+  142(694):257--273, 2016.
+
+\bibitem{todling2}
+Ricardo Todling.
+\newblock A complementary note to ‘a lag-1 smoother approach to system-error
+  estimation’: the intrinsic limitations of residual diagnostics.
+\newblock {\em Quarterly Journal of the Royal Meteorological Society},
+  141(692):2917--2922, 2015.
+
+\end{thebibliography}
