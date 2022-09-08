@@ -1,0 +1,11 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{}{section.1}%
+\contentsline {section}{\numberline {2}Methodology}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Problem formulation}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Error covariance estimation basics }{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}$\mathbf Q$ estimation in 4DVar based on the forcing formulation}{}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Numerical experiments}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Experimental setup}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Results}{}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Conclusion}{}{section.4}%
+\contentsline {section}{\numberline {5}Convergence proof}{}{section.5}%

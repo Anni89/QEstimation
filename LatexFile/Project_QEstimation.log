@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.20)  27 JUL 2022 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.20)  28 JUL 2022 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -930,119 +930,130 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+(./Project_QEstimation.toc)
+\tf@toc=\write5
+\openout5 = `Project_QEstimation.toc'.
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+ [1
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX w
+arning (ext4): destination with the same identifier (name{page.}) has been alre
+ady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.194 \end{align*}
+                   [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 166.
+(hyperref)                removing `math shift' on input line 203.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 166.
+(hyperref)                removing `math shift' on input line 203.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.229 \begin{align*}
-                     [2]pdfTeX warning (ext4): destination with the same identi
-fier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.307 \end{equation}
+l.266 \begin{align*}
                      [3]pdfTeX warning (ext4): destination with the same identi
 fier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.351 \newpage
-               [4]
+l.344 \end{equation}
+                     [4]pdfTeX warning (ext4): destination with the same identi
+fier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.388 \newpage
+               [5]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.421 F
-       urthermore, we generate the background state $\overline x$ given by t...
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
+l.456 ...\overline x^0+\varepsilon_b\end{equation}
+                                                   [6pdfTeX warning (ext4): des
+tination with the same identifier (name{figure.1}) has been already used, dupli
+cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.421 F
-       urthermore, we generate the background state $\overline x$ given by t...
-]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
+l.456 ...\overline x^0+\varepsilon_b\end{equation}
+                                                  ]pdfTeX warning (ext4): desti
+nation with the same identifier (name{page.}) has been already used, duplicate 
+ignored
 <to be read again> 
                    \relax 
-l.428 \newpage
-               [6]
-<Ex1.png, id=140, 905.3825pt x 901.3675pt>
+l.466 \newpage
+               [7]
+<Ex1.png, id=184, 905.3825pt x 901.3675pt>
 File: Ex1.png Graphic file (type png)
 <use Ex1.png>
-Package pdftex.def Info: Ex1.png  used on input line 446.
+Package pdftex.def Info: Ex1.png  used on input line 484.
 (pdftex.def)             Requested size: 362.14659pt x 360.5406pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.450 \newpage
-               [7 <./Ex1.png>]
-<Ex2.png, id=149, 905.3825pt x 901.3675pt>
+l.488 \newpage
+               [8 <./Ex1.png>]
+<Ex2.png, id=192, 905.3825pt x 901.3675pt>
 File: Ex2.png Graphic file (type png)
 <use Ex2.png>
-Package pdftex.def Info: Ex2.png  used on input line 454.
+Package pdftex.def Info: Ex2.png  used on input line 492.
 (pdftex.def)             Requested size: 362.14659pt x 360.5406pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.456 \newpage
-               [8 <./Ex2.png>]
-<Ex3.png, id=155, 905.3825pt x 901.3675pt>
+l.494 \newpage
+               [9 <./Ex2.png>]
+<Ex3.png, id=198, 905.3825pt x 901.3675pt>
 File: Ex3.png Graphic file (type png)
 <use Ex3.png>
-Package pdftex.def Info: Ex3.png  used on input line 460.
+Package pdftex.def Info: Ex3.png  used on input line 498.
 (pdftex.def)             Requested size: 362.14659pt x 360.5406pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.462 \newpage
-               [9 <./Ex3.png>]
-<Ex4.png, id=161, 905.3825pt x 901.3675pt>
+l.500 \newpage
+               [10 <./Ex3.png>]
+<Ex4.png, id=204, 905.3825pt x 901.3675pt>
 File: Ex4.png Graphic file (type png)
 <use Ex4.png>
-Package pdftex.def Info: Ex4.png  used on input line 467.
+Package pdftex.def Info: Ex4.png  used on input line 505.
 (pdftex.def)             Requested size: 362.14659pt x 360.5406pt.
-<Ex5var.png, id=162, 498.86375pt x 510.90875pt>
+<Ex5var.png, id=205, 498.86375pt x 510.90875pt>
 File: Ex5var.png Graphic file (type png)
 <use Ex5var.png>
-Package pdftex.def Info: Ex5var.png  used on input line 472.
+Package pdftex.def Info: Ex5var.png  used on input line 510.
 (pdftex.def)             Requested size: 199.54196pt x 204.35988pt.
-<Ex5len.png, id=163, 479.7925pt x 503.8825pt>
+<Ex5len.png, id=206, 479.7925pt x 503.8825pt>
 File: Ex5len.png Graphic file (type png)
 <use Ex5len.png>
-Package pdftex.def Info: Ex5len.png  used on input line 473.
+Package pdftex.def Info: Ex5len.png  used on input line 511.
 (pdftex.def)             Requested size: 191.91359pt x 201.54942pt.
-<Ex5meanvar.png, id=164, 701.62125pt x 503.8825pt>
+<Ex5meanvar.png, id=207, 701.62125pt x 503.8825pt>
 File: Ex5meanvar.png Graphic file (type png)
 <use Ex5meanvar.png>
-Package pdftex.def Info: Ex5meanvar.png  used on input line 474.
+Package pdftex.def Info: Ex5meanvar.png  used on input line 512.
 (pdftex.def)             Requested size: 280.64352pt x 201.54942pt.
-<Ex5meanlen.png, id=165, 671.50874pt x 503.8825pt>
+<Ex5meanlen.png, id=208, 671.50874pt x 503.8825pt>
 File: Ex5meanlen.png Graphic file (type png)
 <use Ex5meanlen.png>
-Package pdftex.def Info: Ex5meanlen.png  used on input line 475.
+Package pdftex.def Info: Ex5meanlen.png  used on input line 513.
 (pdftex.def)             Requested size: 268.59874pt x 201.54942pt.
 
-Overfull \hbox (30.59093pt too wide) in paragraph at lines 472--476
+Overfull \hbox (30.59093pt too wide) in paragraph at lines 510--514
 [][] [] 
  []
 
 
-Overfull \hbox (89.14777pt too wide) in paragraph at lines 472--476
+Overfull \hbox (89.14777pt too wide) in paragraph at lines 510--514
 []  [] 
  []
 
@@ -1050,36 +1061,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.477 \subsubsection
+l.515 \subsubsection
                     *{Experiment 6 - partial observation in time and space, ...
-[10 <./Ex4.png> <./Ex5var.png> <./Ex5len.png>]
-<Ex6var.png, id=174, 498.86375pt x 510.90875pt>
+[11 <./Ex4.png> <./Ex5var.png> <./Ex5len.png>]
+<Ex6var.png, id=217, 498.86375pt x 510.90875pt>
 File: Ex6var.png Graphic file (type png)
 <use Ex6var.png>
-Package pdftex.def Info: Ex6var.png  used on input line 480.
+Package pdftex.def Info: Ex6var.png  used on input line 518.
 (pdftex.def)             Requested size: 199.54196pt x 204.35988pt.
-<Ex6len.png, id=175, 479.7925pt x 503.8825pt>
+<Ex6len.png, id=218, 479.7925pt x 503.8825pt>
 File: Ex6len.png Graphic file (type png)
 <use Ex6len.png>
-Package pdftex.def Info: Ex6len.png  used on input line 481.
+Package pdftex.def Info: Ex6len.png  used on input line 519.
 (pdftex.def)             Requested size: 191.91359pt x 201.54942pt.
-<Ex6meanvar.png, id=176, 701.62125pt x 503.8825pt>
+<Ex6meanvar.png, id=219, 701.62125pt x 503.8825pt>
 File: Ex6meanvar.png Graphic file (type png)
 <use Ex6meanvar.png>
-Package pdftex.def Info: Ex6meanvar.png  used on input line 482.
+Package pdftex.def Info: Ex6meanvar.png  used on input line 520.
 (pdftex.def)             Requested size: 280.64352pt x 201.54942pt.
-<Ex6meanlen.png, id=177, 671.50874pt x 503.8825pt>
+<Ex6meanlen.png, id=220, 671.50874pt x 503.8825pt>
 File: Ex6meanlen.png Graphic file (type png)
 <use Ex6meanlen.png>
-Package pdftex.def Info: Ex6meanlen.png  used on input line 483.
+Package pdftex.def Info: Ex6meanlen.png  used on input line 521.
 (pdftex.def)             Requested size: 268.59874pt x 201.54942pt.
 
-Overfull \hbox (30.59093pt too wide) in paragraph at lines 480--484
+Overfull \hbox (30.59093pt too wide) in paragraph at lines 518--522
 [][] [] 
  []
 
 
-Overfull \hbox (89.14777pt too wide) in paragraph at lines 480--484
+Overfull \hbox (89.14777pt too wide) in paragraph at lines 518--522
 []  [] 
  []
 
@@ -1087,10 +1098,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.486 \newpage
-               [11 <./Ex5meanvar.png> <./Ex5meanlen.png> <./Ex6var.png> <./Ex6l
+l.524 \newpage
+               [12 <./Ex5meanvar.png> <./Ex5meanlen.png> <./Ex6var.png> <./Ex6l
 en.png> <./Ex6meanvar.png> <./Ex6meanlen.png>]
-Overfull \hbox (64.95146pt too wide) in alignment at lines 494--501
+Overfull \hbox (64.95146pt too wide) in alignment at lines 532--539
  [][][] []
  []
 
@@ -1098,62 +1109,64 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.530 \newpage
-               [12] (./Project_QEstimation.bbl
+l.568 \newpage
+               [13] (./Project_QEstimation.bbl
 (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ))pdfTeX warning (ext4): destination with the same identifier (name{page.}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.533 \end{document}
-                     [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 533.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 533.
+l.571 \end{document}
+                     [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 571.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 571.
  (./Project_QEstimation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 533.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 533.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 571.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 571.
 Package rerunfilecheck Info: File `Project_QEstimation.out' has not changed.
-(rerunfilecheck)             Checksum: F8720BEE455064D7CD10C9DDDB9B34D0;283.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 533.
+(rerunfilecheck)             Checksum: 03AC37251195FA8382370719FD2B8631;625.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 571.
  ) 
 Here is how much of TeX's memory you used:
- 29867 strings out of 480608
- 701462 string characters out of 5903630
+ 29887 strings out of 480608
+ 701735 string characters out of 5903630
  1124034 words of memory out of 5000000
- 45135 multiletter control sequences out of 15000+600000
- 552776 words of font info for 80 fonts, out of 8000000 for 9000
+ 45140 multiletter control sequences out of 15000+600000
+ 552316 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,98p,736b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,98p,766b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/cm-super/sfti0900.pfb>
-Output written on Project_QEstimation.pdf (13 pages, 668422 bytes).
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/cm-super/sfti0900.pfb>
+Output written on Project_QEstimation.pdf (14 pages, 705699 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 346 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

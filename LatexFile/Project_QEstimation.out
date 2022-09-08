@@ -1,5 +1,10 @@
-\BOOKMARK [1][-]{section.1}{Error covariance estimation}{}% 1
-\BOOKMARK [1][-]{section.2}{Q estimation in 4DVar data assimilation}{}% 2
-\BOOKMARK [1][-]{section.3}{Experimental setup}{}% 3
-\BOOKMARK [1][-]{section.4}{Results}{}% 4
-\BOOKMARK [1][-]{section.5}{Convergence proof}{}% 5
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Methodology}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Problem formulation}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Error covariance estimation basics }{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Q estimation in 4DVar based on the forcing formulation}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Numerical experiments}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Experimental setup}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Results}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 9
+\BOOKMARK [1][-]{section.5}{Convergence proof}{}% 10

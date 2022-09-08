@@ -132,7 +132,7 @@ def q_estimate(win,my_model,u0, p, nt,mr, mt, dmr, dmt,b_var,b_len,d_var,q_var_t
         
         # compute innovations 
         for n in range(mt):
-            inno[n*mr:(n+1)*mr]=d[j,n*mr:(n+1)*mr]-H[j,1+n*dmt,n*mr:(n+1)*mr]@u_back[j,1+n*dmt]
+            inno[n*mr:(n+1)*mr] = d[j,n*mr:(n+1)*mr]-H[j,1+n*dmt,n*mr:(n+1)*mr]@u_back[j,1+n*dmt]
 
         # compute ctranspose 
         for n in range(1,nt+1):
@@ -141,14 +141,14 @@ def q_estimate(win,my_model,u0, p, nt,mr, mt, dmr, dmt,b_var,b_len,d_var,q_var_t
         # compute W matrix 
         for n in range(1,nt+1):
             for i in range(nr):
-                ww[n-1,i]=1/2*(1/mr*sum(zd[n,k*dmr]*c[n*nr+(k*dmr+i)%nr,0] for k in range(mr))+1/mr*sum((zd[n,(k*dmr+i)%nr])*(c[n*nr+k*dmr,0]) for k in range(mr)))
+                ww[n-1,i] = 1/2*(1/mr*sum(zd[n,k*dmr]*c[n*nr+(k*dmr+i)%nr,0] for k in range(mr))+1/mr*sum((zd[n,(k*dmr+i)%nr])*(c[n*nr+k*dmr,0]) for k in range(mr)))
     
         if dmr!=1:
             for n in range(1,nt+1):
                 for i in range(mr):
-                    w[n-1,i*dmr]=ww[n-1,i*dmr]
+                    w[n-1,i*dmr] = ww[n-1,i*dmr]
         else: 
-            w=ww
+            w = ww
 
     
         # temporal averaging
@@ -194,46 +194,47 @@ def q_estimate_analysis(win, var,length, meanvar, meanlen,q_var_truth,l_truth):
     print(f'estimated variances {var}')
     print(f'estimated correlation length {length}')
 
+    x = np.linspace(0, win-1, win)
     
     fig, axes  = plt.subplots(nrows=2,ncols=2,figsize=(15,15))
 
 
-    axes[0,0].plot(var, 'b.',  markersize=20, label='estimated variance')
-    axes[0,0].plot(np.mean(var)*np.ones(win), 'm-', markersize=20,label='mean')
-    axes[0,0].plot(q_var_truth*np.ones(win), 'r-',markersize=20, label='true variance')
-    axes[0,0].set_xlabel('assimilation window number', fontsize=20)
+    axes[0,0].plot(x,var, 'b.',  markersize=20, label='estimated variance')
+    axes[0,0].plot(x,np.mean(var)*np.ones(win), 'm-', markersize=20,label='mean')
+    axes[0,0].plot(x,q_var_truth*np.ones(win), 'r-',markersize=20, label='true variance')
+    axes[0,0].set_xlabel('assimilation window number', fontsize=15)
     axes[0,0].set_ylim([0,2*q_var_truth])
-    axes[0,0].tick_params(axis='x', labelsize=20)
-    axes[0,0].tick_params(axis='y', labelsize=20)
-    axes[0,0].legend(fontsize=18, loc='upper right')
-    axes[0,0].set_title(f'mean = {np.mean(var):.4f} & std = {np.std(var):.4f}', fontsize=18)
+    axes[0,0].tick_params(axis='x', labelsize=15)
+    axes[0,0].tick_params(axis='y', labelsize=15)
+    axes[0,0].legend(fontsize=15, loc='upper right')
+    axes[0,0].set_title(f'mean = {np.mean(var):.4f} & std = {np.std(var):.4f}', fontsize=15)
 
-    axes[0,1].plot(length, 'b.',  markersize=20, label='estimated correlation length')
-    axes[0,1].plot(np.mean(length)*np.ones(win), 'm-', markersize=20,label='mean')
-    axes[0,1].plot(l_truth*np.ones(win), 'r-',markersize=20, label='true correlation length')
-    axes[0,1].set_xlabel('assimilation window number', fontsize=20)
+    axes[0,1].plot(x,length, 'b.',  markersize=20, label='estimated correlation length')
+    axes[0,1].plot(x,np.mean(length)*np.ones(win), 'm-', markersize=20,label='mean')
+    axes[0,1].plot(x,l_truth*np.ones(win), 'r-',markersize=20, label='true correlation length')
+    axes[0,1].set_xlabel('assimilation window number', fontsize=15)
     axes[0,1].set_ylim([0,2*l_truth])
-    axes[0,1].tick_params(axis='x', labelsize=20)
-    axes[0,1].tick_params(axis='y', labelsize=20)
-    axes[0,1].legend(fontsize=18, loc='upper right')
-    axes[0,1].set_title( f'mean = {np.mean(length):.4f} & std = {np.std(length):.4f}', fontsize=18)
+    axes[0,1].tick_params(axis='x', labelsize=15)
+    axes[0,1].tick_params(axis='y', labelsize=15)
+    axes[0,1].legend(fontsize=15, loc='upper right')
+    axes[0,1].set_title( f'mean = {np.mean(length):.4f} & std = {np.std(length):.4f}', fontsize=15)
 
     
-    axes[1,0].plot(meanvar, 'b.',  markersize=20, label='averaged estimated variance ')
-    axes[1,0].plot(q_var_truth*np.ones(win), 'r-',markersize=20, label='true variance')
-    axes[1,0].set_xlabel('assimilation window number', fontsize=20)
+    axes[1,0].plot(x,meanvar, 'b.',  markersize=20, label='averaged estimated variance ')
+    axes[1,0].plot(x,q_var_truth*np.ones(win), 'r-',markersize=20, label='true variance')
+    axes[1,0].set_xlabel('assimilation window number', fontsize=15)
     axes[1,0].set_ylim([0,2*q_var_truth])
-    axes[1,0].tick_params(axis='x', labelsize=20)
-    axes[1,0].tick_params(axis='y', labelsize=20)
-    axes[1,0].legend(fontsize=18)
+    axes[1,0].tick_params(axis='x', labelsize=15)
+    axes[1,0].tick_params(axis='y', labelsize=15)
+    axes[1,0].legend(fontsize=15)
     
-    axes[1,1].plot(meanlen, 'b.',  markersize=20, label='averaged estimated corr. length')
-    axes[1,1].plot(l_truth*np.ones(win), 'r-',markersize=20, label='true correlation length')
-    axes[1,1].set_xlabel('assimilation window number', fontsize=20)
+    axes[1,1].plot(x,meanlen, 'b.',  markersize=20, label='averaged estimated corr. length')
+    axes[1,1].plot(x,l_truth*np.ones(win), 'r-',markersize=20, label='true correlation length')
+    axes[1,1].set_xlabel('assimilation window number', fontsize=15)
     axes[1,1].set_ylim([0,2*l_truth])
-    axes[1,1].tick_params(axis='x', labelsize=20)
-    axes[1,1].tick_params(axis='y', labelsize=20)
-    axes[1,1].legend(fontsize=18)
+    axes[1,1].tick_params(axis='x', labelsize=15)
+    axes[1,1].tick_params(axis='y', labelsize=15)
+    axes[1,1].legend(fontsize=15)
 
 
 def evolution_over_windows(gp,win,mt,dmt,nt,dt,u_truth,u_back,u_analysis,H,d):
@@ -264,3 +265,41 @@ def evolution_over_windows(gp,win,mt,dmt,nt,dt,u_truth,u_back,u_analysis,H,d):
     axes.legend(fontsize=18)
     axes.tick_params(axis='x', labelsize=20)
     axes.tick_params(axis='y', labelsize=20)
+
+
+def confidence_interval(win,rep,meanvar,meanlen,q_var_truth,l_truth ):
+    m  = np.zeros(win)
+    c  = np.zeros(win)
+    m1 = np.zeros(win)
+    c1 = np.zeros(win)
+
+    for i in range(win):
+        m[i]  = np.mean(meanvar[:,i])
+        c[i]  = 1.96 * np.std(meanvar[:,i])/np.sqrt(rep) 
+        m1[i] = np.mean(meanlen[:,i])
+        c1[i] = 1.96 * np.std(meanlen[:,i])/np.sqrt(rep)
+
+    x = np.linspace(0, win-1, win)
+
+    fig, ax = plt.subplots(1,2,figsize=(15,5))
+
+    ax[0].plot(x,m,markersize=20,label='mean estimated variance')
+    ax[0].fill_between(x,(m-c), (m+c), color='b', alpha=.1)
+    ax[0].plot(q_var_truth*np.ones(win), 'r-',markersize=20, label='true variance')
+    ax[0].set_ylim([0,2*q_var_truth])
+    ax[0].set_xlabel('assimilation window number', fontsize=15)
+    ax[0].tick_params(axis='x', labelsize=15)
+    ax[0].tick_params(axis='y', labelsize=15)
+    ax[0].legend(fontsize=15, loc='upper right')
+
+    ax[1].plot(x,m1,markersize=20,label='mean estimated correlation length')
+    ax[1].fill_between(x,(m1-c1), (m1+c1), color='b', alpha=.1)
+    ax[1].plot(l_truth*np.ones(win), 'r-',markersize=20, label='true correlation length')
+    ax[1].set_ylim([0,2*l_truth])
+    ax[1].set_xlabel('assimilation window number', fontsize=15)
+    ax[1].tick_params(axis='x', labelsize=15)
+    ax[1].tick_params(axis='y', labelsize=15)
+    ax[1].legend(fontsize=15, loc='upper right')
+
+
+

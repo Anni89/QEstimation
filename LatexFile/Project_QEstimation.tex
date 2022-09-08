@@ -100,21 +100,75 @@
 
 \numberwithin{equation}{section}
 
-\title{\textbf{Model error covariance estimation in observation space weak-constraint 4DVar}}
+\title{\textbf{Model error covariance estimation in weak-constraint 4DVar}}
 \author{Peter Jan van Leeuwen, Anne Pein}
 
 \begin{document}
 \maketitle
-\abstract{The  analysis state in weak-constraint variational data assimilation is computed as the minimiser of a suitable costfunction that penalises deviations fromthe observations, from a background state and from the dynamical model itself, each weighted by their respective error covariancematrices.  Allowing for errors in thedynamical model is of importance in many geoscience applications, where the full model mightnot be available e.g. due to unresolved processes. Higher accuracy and reduced sensitivityto initial condition compared to the strong constraint formulation have been observed. Inparticular, via an efficient implementation of the so-called representer method in observationspace, the weak-constraint 4DVar is suitable for large operational systems.Focusing on this specific setting, we revisit one of the major challenges indata assimilation: estimating model error covariance matrices. Compared to observation andbackground error covariances the influence and estimation of model error covariances is muchless studied. 
+\abstract{
 
-\textcolor{red}{In this work we present a possibility to estimate the model error covariance matrix from the data assimilation result and 
-Using a weak-constraint 4D-Var implementation, we study different toy exampleswith an additive model error with statistics that is constant over the assimilation window. Inparticular, we analyse the sensitivity of the analysis to the model error covariance and explorepossibilities to derive information about the true model error from the analysis that will allowan iterative tuning of the covariance matrix. In the spirit of previous approaches, we rely hereon statistics based on differences between the analysis, background and observations.}}
+\textcolor{red}{TO DO: In this work, we present a method to estimate the model error covariance matrix based on 
+from the data assimilation 
+Using a weak-constraint 4D-Var implementation, we study different toy examples
+with an additive model error with statistics that is constant over the assimilation window. In
+particular, we analyse the sensitivity of the analysis to the model error covariance and explore
+possibilities to derive information about the true model error from the analysis that will allow
+an iterative tuning of the covariance matrix. In the spirit of previous approaches, we rely here
+on statistics based on differences between the analysis, background and observations.}}
 
-\section*{Introduction}
-We estimate the model error covariance matrix in a 4DVar data assimilation experiment, assuming that the background error covariance and observation error covariance are correctly specified in the scheme. The idea is based on residual statistics that have been used for similar purposes before, see (Hollingsworth and Lonnberg, 1989; Dee and da Silva, 1999;Desrozierset al., 2005; Chapniket al., 2006). Note that this approach does not resolve any of the issues addressed in \cite{todling2} regarding the separate estimation of several unknown error covariances. 
+\tableofcontents
+
+\section{Introduction}
+
+The  analysis state in weak-constraint variational data assimilation is computed as the minimiser of a suitable cost
+function that penalises deviations from
+the observations, from a background state and from the dynamical model itself, each weighted by their respective error covariance
+matrices.  Allowing for errors in the
+dynamical model is of importance in many geoscience applications where the full model might
+not be available e.g. due to unresolved processes. Higher accuracy and reduced sensitivity
+to initial condition compared to the strong-constraint formulation have been observed. In
+particular, via an efficient implementation of the so-called representer method in observation
+space, the weak-constraint 4DVar is suitable for large operational systems.
+Focusing on this specific setting, we revisit one of the major challenges in
+data assimilation: estimating model error covariance matrices. Compared to observation and
+background error covariances the influence and estimation of model error covariances is much
+less studied. 
+We estimate the model error covariance matrix in a 4DVar data assimilation experiment, assuming that the background error covariance and observation error covariance are correctly specified in the scheme. The idea is based on residual statistics that have been used for similar purposes before, see (Hollingsworth and Lonnberg, 1989; Dee and da Silva, 1999;Desrozierset al., 2005; Chapniket al., 2006). Note that this approach does not resolve any of the issues addressed in \cite{todling2} regarding the separate estimation of several unknown error covariances.\\
+ \textcolor{red}{TO DO}
 
 
-\section{Error covariance estimation}
+\section{Methodology}
+\subsection{Problem formulation}
+We assume that our model state evolves according to 
+\begin{equation}\label{eqn:strongmodel}x^{n+1}=\mathcal M(x^n)+\varepsilon_{\mathbf Q}^{n+1},\ \ \ \ n=0,...,N_t,
+\end{equation}
+where $x^n\in\mathbb R^{N_x}$ and $\mathcal M$ is a possibly non-linear, deterministic model. The time dependent errors $\varepsilon_{\mathbf Q}^n$ account for the missing physics in the model and numerical approximations, we assume that $\varepsilon_{\mathbf Q}^n \sim \mathcal N(0,\mathbf Q_n)$ and $\mathbf Q_n\in \mathbb R^{N_x\times N_x}$ is the model error covariance matrix at time $n$.
+
+Furthermore, observations of certain state variables at certain time steps are available
+\begin{equation}
+y^k=\mathcal H^k(x^k)+\varepsilon_\mathbf R^k,
+\end{equation}
+where $k=t_1,....,t_{m_t}$ and $\mathcal H^k: \mathbb R^{N_x}\to\mathbb R^{m_x}$ denotes the possibly non-linear measurement operator at time $k$, i.e. the operator that maps a state vector into the observation space. The uncertainty associated with the measurement is assumed to be distributed as $\varepsilon_{\mathbf R}^k\sim \mathcal N(0,\mathbf R^k)$, where $\mathbf R^k\in \mathbb R^{m_x\times m_x}$ is the observation error covariance matrix at time $k$. 
+Let us also introduce the notations
+\begin{align*}
+x&=(x^0,....,x^{N_t}) \in \mathbb R^{(N_t+1)\times N_x},\\
+ y&=(y^{t_1},...,y^{t_{m_t}})\in \mathbb R^{m_t\times m_x},\\
+\mathcal H(x)&=(\mathcal H^{t_1}(x^{t_1}),...,\mathcal H^{t_{m_t}}(x^{t_{m_t}})).
+\end{align*}
+
+Finally, we have are given a background state 
+\begin{equation}x_b^0=x^0+\varepsilon_{\mathbf B},\end{equation}
+with $\varepsilon_\mathbf B \sim \mathcal N(0,\mathbf B)$ and background error covariance matrix $\mathbf B\in \mathbb R^{N_x\times N_x}$.  
+
+Via Maximum Lieklihood considerations one can derive a cost function whose minimiser is the desired analysis state of the weak-constraint problem. In the state space formulation it is given as follows (see \cite{})
+\begin{align}
+J(x)=&\frac{1}{2}(x_b^0-x^0)^\top \mathbf B^{-1}(x_b^0-x^0)+\frac{1}{2}(y-\mathcal H(x))^\top \mathbf R^{-1}(y-\mathcal H(x))\\&+\frac{1}{2}\sum_{n=1}^{N_t}(x^n-\mathcal M(x^{n-1}))^\top \mathbf Q_n^{-1}(x^{n}-\mathcal M(x^{n-1})),
+\label{eqn:coststate}
+\end{align}
+where we used the notation $\mathbf R=\text{diag}(\mathbf R^k)_{k=t_1,....,t_{m_t}}$.
+
+Now, in real applications the covariance matrices $\mathbf B, \mathbf R, \mathbf Q_n$ are unknown and need to be inferred. Thus for the cost function \eqref{eqn:coststate} typically only approximations of the true error covariance matrices are available. In our work, we assume that the background error covariance matrix and observation error covariance matrix are known and correctly specified in \eqref{eqn:coststate}. However, the model error covariance matrix is assumed to be unknown and the objective is to iteratively improve the estimate of this matrix. Before going into details about our method, we will briefly recall error covariance estimation theory based on consistency diagnostics in the next subsection. 
+\subsection{Error covariance estimation basics }
 Let us highlight some ideas on error covariance estimation in data assimilation. 
 Assume we compute an analysis state $x_a$ based on the following scheme 
 \begin{equation}
@@ -146,7 +200,7 @@ where $\langle \cdot \rangle$ denotes the mathematical expectation operator.
  \end{align*}
  where $a_i$ denotes the analysis of a previous iteration, generated with $\tilde{\mathbf K}_i$  in \eqref{eqn:kalman}. 
  See also \cite{menard} and  \cite{gauthier}.
-\section{$\mathbf Q$ estimation in 4DVar data assimilation}
+\subsection{$\mathbf Q$ estimation in 4DVar based on the forcing formulation}
 \label{sec:method}
 We consider the weak constraint 4DVar data assimilation scheme in the forcing formulation (see \cite{book} for more information). That is, we derive an analysis state $z_a$ by minimising the cost function
 \begin{equation}
@@ -336,7 +390,8 @@ To recover the correlation length scale of the estimated covariance matrix we fi
 
 
 
-\section{Experimental setup}
+\section{Numerical experiments}
+\subsection{Experimental setup}
 In the following we will outline the setup for the twin experiments that we use to test the above estimation approach. 
 
 \medskip
@@ -409,7 +464,7 @@ Furthermore, we generate the background state $\overline x$ given by the forecas
 Finally, as mentioned above, we assume that the true values of  ${\mathbf B}$ and ${\mathbf R}$ and known and will be assigned to the data assimilation scheme. The true model error covariance matrix is unknown and we start with an initial guess given by $\hat{\mathbf Q}_0=\mathbf B$. For the first assimilation window we perform the 4DVar data assimilation and derive a new estimate $\hat{\mathbf Q}_1$ via the method described in section \ref{sec:method}. This matrix is subsequently assigned to the data assimilation scheme for the second assimilation window. This procedure is iterated for a number of $N$ assimilation windows. 
 
 \newpage
-\section{Results}
+\subsection{Results}
 
 \subsubsection*{Experiment 1}
 We choose  ${\mathbf B}=\text{diag}(\sigma_b^2)$ \textcolor{red}{(need to consider more complex matrices here)}. Parameters are summarised in the following table: 
@@ -465,7 +520,7 @@ Same as experiment 5, only difference is that only every fourth gridpoint is obs
 \includegraphics[scale=0.4]{Ex6meanvar}\hspace{-3cm}
 \includegraphics[scale=0.4]{Ex6meanlen}
 
-
+\section{Conclusion}
 \newpage
 \section{Convergence proof}
 \textcolor{red}{need to think about this}\\
